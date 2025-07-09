@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Content.in - Elevate Your Brand</title>
+  <meta name="description" content="SocialHub Pro specializes in Social Media Management, Content Creation, Video Editing, Logo Design, Photography, Website Development, and Paid Ads to help your brand grow." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Font Awesome for Icons -->
+  <!-- Removed FontAwesome kit script due to invalid kit ID causing 403 error -->
+  <!-- <script src="https://kit.fontawesome.com/your_kit_id.js" crossorigin="anonymous" defer></script> -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- Navbar -->
+<nav id="mainNavbar" class="fixed top-0 w-full bg-white shadow-lg z-50 border-b-4 border-[#a51a1a] transition-colors duration-300 ease-in-out">
+  <div class="container mx-auto flex items-center justify-between p-4">
+    <a href="#home" class="flex items-center hover:text-[#d84315] transition-colors duration-300 ease-in-out" aria-label="SocialHub Pro Home" style="width: max-content;">
+      <img src="img/logo.jpeg" alt="Content.in Logo" class="h-10 w-auto" />
+    </a>
+    <input type="checkbox" id="menu-toggle" class="hidden" aria-label="Toggle menu" />
+    <label for="menu-toggle" class="cursor-pointer md:hidden block" aria-label="Open menu" role="button" tabindex="0" onkeydown="if(event.key==='Enter'){this.click();}">
+      <i class="bi bi-list text-3xl"></i>
+    </label>
+    <ul class="hidden md:flex space-x-8 text-lg font-semibold" role="menubar" aria-label="Primary navigation">
+      <li role="none"><a href="#home" class="hover:text-[#7a1212]" role="menuitem" tabindex="-1">Home</a></li>
+      <li role="none"><a href="#about" class="hover:text-[#7a1212]" role="menuitem" tabindex="-1">About</a></li>
+      <li role="none"><a href="#services" class="hover:text-[#7a1212]" role="menuitem" tabindex="-1">Services</a></li>
+      <li role="none"><a href="#portfolio" class="hover:text-[#7a1212]" role="menuitem" tabindex="-1">Portfolio</a></li>
+      <li role="none"><a href="#testimonials" class="hover:text-[#7a1212]" role="menuitem" tabindex="-1">Testimonials</a></li>
+      <li role="none"><a href="#contact" class="hover:text-[#7a1212]" role="menuitem" tabindex="-1">Contact</a></li>
+    </ul>
+    <ul class="md:hidden bg-white absolute top-full left-0 w-full text-center py-4 space-y-4 font-semibold border-t border-[#a51a1a]" id="menu" style="display:none;" role="menu" aria-label="Mobile navigation">
+      <li role="none"><a href="#home" class="block hover:text-[#7a1212]" role="menuitem" tabindex="-1">Home</a></li>
+      <li role="none"><a href="#about" class="block hover:text-[#7a1212]" role="menuitem" tabindex="-1">About</a></li>
+      <li role="none"><a href="#services" class="block hover:text-[#7a1212]" role="menuitem" tabindex="-1">Services</a></li>
+      <li role="none"><a href="#portfolio" class="block hover:text-[#7a1212]" role="menuitem" tabindex="-1">Portfolio</a></li>
+      <li role="none"><a href="#testimonials" class="block hover:text-[#7a1212]" role="menuitem" tabindex="-1">Testimonials</a></li>
+      <li role="none"><a href="#contact" class="block hover:text-[#7a1212]" role="menuitem" tabindex="-1">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" aria-label="Hero section" class="relative flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-[#5c0f0f] via-[#7a1212] to-[#a51a1a] text-white overflow-hidden px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 shadow-2xl">
+  <!-- Hero Background Animation -->
+  <div class="absolute inset-0 overflow-hidden z-0 pointer-events-none" aria-hidden="true">
+    <!-- Morphing blob -->
+    <div class="absolute top-[-100px] left-[-100px] w-[500px] h-[500px] bg-gradient-to-br from-yellow-300 via-red-400 to-[#7a1212] rounded-full opacity-30 blur-3xl animate-morph"></div>
+
+    <!-- Floating particles -->
+    <div class="absolute inset-0 z-0 pointer-events-none">
+      <div class="floating-stars"></div>
+    </div>
+  </div>
+
+  <!-- Content container -->
+  <div class="relative z-10 max-w-7xl w-full flex flex-col md:flex-row items-center md:items-start justify-between gap-8 sm:gap-10 md:gap-12 lg:gap-16 xl:gap-20 2xl:gap-24">
+    <!-- Left side: Headline and subheading -->
+    <div class="flex-1 text-center md:text-left">
+      <h1 class="animate-fade-slide text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4 sm:mb-5 md:mb-6">
+        Transform Your <span class="text-yellow-400"><span id="rotating-word">Social Presence</span></span><br />
+        with <span class="text-yellow-400">Content.in</span>
+      </h1>
+
+      <p class="animate-fade-slide animation-delay-300 text-lg sm:text-xl md:text-2xl max-w-lg mb-6 sm:mb-7 md:mb-8">
+        Expert Social Media Management, Content Creation, Video Editing, Logo Design, Photography, Website Development, and Paid Ads to elevate your brand.
+      </p>
+      <div class="animate-fade-slide animation-delay-600 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center md:justify-start">
+        <a href="#contact" class="bg-yellow-400 text-[#7a1212] font-semibold rounded-lg px-8 sm:px-10 py-3 sm:py-4 shadow-lg hover:bg-yellow-500 transition-colors duration-300" aria-label="Get Started with SocialHub Pro">
+          Get Started
+        </a>
+        <a href="#services" class="border-2 border-yellow-400 text-yellow-400 font-semibold rounded-lg px-8 sm:px-10 py-3 sm:py-4 hover:bg-yellow-400 hover:text-[#7a1212] transition-colors duration-300" aria-label="Learn more about our services">
+          Learn More
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right side abstract shape -->
+  <div aria-hidden="true" class="absolute right-0 bottom-0 w-96 h-96 bg-[#7a1212] opacity-70 rounded-[40%_60%_70%_30%_/_50%_70%_30%_60%] animate-morph2 hidden md:block"></div>
+
+</section>
+
+<!-- About Section -->
+<section id="about" class="relative overflow-hidden py-24 px-6 sm:px-10 lg:px-20 shadow-inner rounded-3xl">
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-20 z-0">
+    <source src="videos/video1.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay Content -->
+  <div class="relative z-10 max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 backdrop-blur-sm bg-white/70 rounded-3xl p-10 shadow-2xl border border-white/30">
+
+    <!-- Video or Image -->
+    <div data-aos="fade-right" class="w-full md:w-1/2 flex justify-center items-center">
+      <video autoplay muted loop playsinline class="rounded-2xl shadow-lg w-full max-w-xs sm:max-w-sm border border-[#e44] lg:h-96 xl:h-[28rem] 2xl:h-[32rem]">
+        <source src="videos/video1.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <!-- Text Content -->
+    <div data-aos="fade-left" class="w-full md:w-1/2 text-center md:text-left">
+      <h2 class="text-4xl sm:text-5xl font-extrabold text-[#7a1212] mb-4 leading-tight tracking-tight">We Are <span class="text-[#d84315]">Content.in</span></h2>
+      <p class="text-lg text-gray-700 leading-relaxed mb-4">
+        A bold team of creators, editors, marketers &amp; visionaries turning your brand into a digital trend. We blend content, tech &amp; strategy to make you stand out — on screens &amp; in minds.
+      </p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-6">
+        We create stories that convert, visuals that go viral, and platforms that grow your business.
+      </p>
+
+      <!-- Quick Metrics -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 mt-8">
+        <div class="text-center">
+          <p class="text-3xl font-extrabold text-[#d84315]">500+</p>
+          <p class="text-sm text-gray-600">Delivery Project</p>
+        </div>
+        <div class="text-center">
+          <p class="text-3xl font-extrabold text-[#d84315]">15+</p>
+          <p class="text-sm text-gray-600">Brands Transformed</p>
+        </div>
+        <div class="text-center">
+          <p class="text-3xl font-extrabold text-[#d84315]">5k+</p>
+          <p class="text-sm text-gray-600">Social Views</p>
+        </div>
+      </div>
+
+      <!-- Founder/Team Info -->
+      <div class="flex items-center gap-4 mt-10">
+        <img src="assets/images/founder.jpg" alt="Founder" class="w-14 h-14 rounded-full border-2 border-[#d84315] shadow-md" />
+        <div>
+          <p class="font-semibold text-gray-800">Mano</p>
+          <p class="text-sm text-gray-500">Founder &amp; Chief Content Strategist</p>
+        </div>
+      </div>
+
+      <!-- CTA Button -->
+      <a href="#services" class="inline-block mt-6 bg-[#d84315] text-white px-6 py-3 rounded-lg shadow hover:bg-[#b5320f] transition duration-300">
+        Discover Our Services
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-20 text-gray-800 shadow-lg rounded-3xl">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-4xl sm:text-5xl font-extrabold text-[#a51a1a] mb-4">Our Services</h2>
+    <p class="text-lg sm:text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
+      Everything your brand needs to thrive on social media — all under one roof.
+    </p>
+
+    <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Service 1 -->
+      <div class="bg-white bg-opacity-80 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300">
+        <div class="text-[#a51a1a] text-5xl mb-4">
+          <i class="bi bi-instagram"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">Social Media Management</h3>
+        <p class="text-gray-700">
+          We manage your entire social media presence, from strategy to posting, growth, engagement, and analytics.
+        </p>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="bg-white bg-opacity-80 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300">
+        <div class="text-[#a51a1a] text-5xl mb-4">
+          <i class="bi bi-camera-reels-fill"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">Video Editing</h3>
+        <p class="text-gray-700">
+          High-quality reels, promos, and story edits to grab attention and go viral across platforms.
+        </p>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="bg-white bg-opacity-80 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300">
+        <div class="text-[#a51a1a] text-5xl mb-4">
+          <i class="bi bi-brush-fill"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">Content Creation</h3>
+        <p class="text-gray-700">
+          From viral reels to product photography and daily stories — we create scroll-stopping content.
+        </p>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="bg-white bg-opacity-80 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300">
+        <div class="text-[#a51a1a] text-5xl mb-4">
+          <i class="bi bi-vector-pen"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">Logo &amp; Branding</h3>
+        <p class="text-gray-700">
+          Get custom logos, visual identities, and social kits that represent your unique brand voice.
+        </p>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="bg-white bg-opacity-80 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300">
+        <div class="text-[#a51a1a] text-5xl mb-4">
+          <i class="bi bi-globe2"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">Website Development</h3>
+        <p class="text-gray-700">
+          Build a stunning and responsive website that speaks for your brand and converts visitors into clients.
+        </p>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="bg-white bg-opacity-80 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-shadow duration-300">
+        <div class="text-[#a51a1a] text-5xl mb-4">
+          <i class="bi bi-bullseye"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-2">Paid Advertising</h3>
+        <p class="text-gray-700">
+          Strategic Facebook, Instagram &amp; Google ad campaigns to get you real, measurable results.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Video Portfolio Section -->
+<section id="video-portfolio" class="py-32 text-gray-800 shadow-lg rounded-3xl">
+    <div class="max-w-full mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl sm:text-5xl font-extrabold text-[#a51a1a] mb-4">Video Portfolio</h2>
+      <p class="text-lg sm:text-xl text-gray-600 mb-12 max-w-full mx-auto">
+        Explore our curated collection of engaging video reels showcasing our expertise and creativity.
+      </p>
+    </div>
+    <div id="video-portfolio-container"></div>
+
+      <!-- Swiper Slider -->
+      <div class="swiper mySwiper w-full max-w-full flex-grow">
+        <div class="swiper-wrapper" id="videoSlidesContainer">
+          <!-- Slides will be dynamically inserted here -->
+        </div>
+        <!-- Swiper navigation buttons for mobile -->
+        <div class="flex justify-center space-x-8 mt-6">
+          <button class="swiper-button-prev bg-white bg-opacity-20 backdrop-blur-md border border-white border-opacity-30 text-white rounded-full p-5 shadow-lg hover:scale-110 transform transition-transform duration-300 ease-in-out sm:p-3 sm:text-sm sm:h-10 sm:w-10" aria-label="Previous slide">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button class="swiper-button-next bg-white bg-opacity-20 backdrop-blur-md border border-white border-opacity-30 text-white rounded-full p-5 shadow-lg hover:scale-110 transform transition-transform duration-300 ease-in-out sm:p-3 sm:text-sm sm:h-10 sm:w-10" aria-label="Next slide">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 z-50">
+      <div class="relative w-full max-w-5xl max-h-[90vh] p-4 bg-black rounded-lg shadow-lg flex flex-col">
+        <button id="closeModal" class="absolute top-3 right-3 text-white text-4xl font-bold hover:text-gray-400 focus:outline-none" aria-label="Close video modal">&times;</button>
+        <video id="modalVideo" class="w-full max-h-[80vh] rounded-lg" controls autoplay></video>
+        <div id="modalTitle" class="mt-3 text-white text-center text-xl font-semibold"></div>
+      </div>
+    </div>
+
+</section>
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-20 sm:py-28 md:py-32 text-gray-800 rounded-3xl">
+  <div class="max-w-full mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-[#a51a1a] mb-4 sm:mb-6 md:mb-8">What Our Clients Say</h2>
+    <p class="text-base sm:text-lg md:text-xl text-gray-600 mb-10 sm:mb-12 md:mb-16 max-w-full mx-auto">
+      Real feedback from real people we’ve helped grow online.
+    </p>
+
+    <!-- Swiper Slider for Testimonials -->
+    <div class="swiper testimonialsSwiper w-full max-w-full flex-grow">
+      <div class="swiper-wrapper" id="testimonialSlidesContainer">
+        <!-- Slides will be dynamically inserted here -->
+      </div>
+      <!-- Swiper navigation buttons for Testimonials -->
+      <div class="flex justify-center space-x-8 mt-6">
+        <button class="swiper-button-prev-testimonials bg-[#d84315] text-white rounded-full p-5 shadow-lg hover:bg-[#b5320f] transition-transform duration-300 ease-in-out sm:p-3 sm:text-sm sm:h-10 sm:w-10" aria-label="Previous testimonial"></button>
+        <button class="swiper-button-next-testimonials bg-[#d84315] text-white rounded-full p-5 shadow-lg hover:bg-[#b5320f] transition-transform duration-300 ease-in-out sm:p-3 sm:text-sm sm:h-10 sm:w-10" aria-label="Next testimonial"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 text-gray-800 ">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-4xl font-bold text-[#a51a1a] mb-4">Let's Connect</h2>
+    <p class="text-lg text-gray-600 mb-12">
+      Need help growing your business, managing your content, or collaborating on a project? I’m just a message away!
+    </p>
+  </div>
+
+  <div class="grid lg:grid-cols-2 gap-10 max-w-6xl mx-auto items-start">
+
+    <!-- Left: Contact Info -->
+    <div class="space-y-6">
+      <div class="text-left">
+        <h3 class="text-2xl font-semibold text-[#a51a1a] mb-3">Contact Info</h3>
+        <p class="text-gray-600 mb-5">Reach out via email, phone, or connect on socials.</p>
+
+        <ul class="space-y-4">
+          <li class="flex items-center gap-3">
+            <i class="fas fa-envelope text-[#a51a1a] text-xl"></i>
+            <a href="mailto:your@email.com" class="text-gray-700 hover:text-[#a51a1a] transition">your@email.com</a>
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="fas fa-phone-alt text-[#a51a1a] text-xl"></i>
+            <a href="tel:+919380955577" class="text-gray-700 hover:text-[#a51a1a] transition">+91 9380955577</a>
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="fas fa-map-marker-alt text-[#a51a1a] text-xl"></i>
+            <span class="text-gray-700">Chennai, Tamil Nadu, India</span>
+          </li>
+        </ul>
+
+        <div class="flex gap-5 mt-6">
+          <a href="#" class="text-[#a51a1a] hover:text-gray-800 text-xl"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-[#a51a1a] hover:text-gray-800 text-xl"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="text-[#a51a1a] hover:text-gray-800 text-xl"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Contact Form -->
+    <form class="bg-gray-100 rounded-2xl shadow-md p-8 space-y-6">
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700">Your Name</label>
+        <input type="text" id="name" name="name" required class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-[#a51a1a] focus:border-[#a51a1a]" placeholder="Name here" />
+      </div>
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+        <input type="email" id="email" name="email" required class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-[#a51a1a] focus:border-[#a51a1a]" placeholder="you@example.com" />
+      </div>
+      <div>
+        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+        <textarea id="message" name="message" rows="5" required class="mt-1 w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-[#a51a1a] focus:border-[#a51a1a]" placeholder="How can I help you?"></textarea>
+      </div>
+      <button type="submit" class="w-full bg-[#a51a1a] text-white font-medium py-3 rounded-lg hover:bg-[#8d1313] transition duration-300">
+        Send Message
+      </button>
+    </form>
+
+  </div>
+</section>
+
+  <style>
+    /* Toaster styles */
+    #toaster {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+      min-width: 250px;
+      padding: 15px 20px;
+      border-radius: 8px;
+      color: white;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      transform: translateY(-20px);
+    }
+    #toaster.show {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+    #toaster.success {
+      background-color: #22c55e; /* green */
+    }
+    #toaster.error {
+      background-color: #ef4444; /* red */
+    }
+    /* Button loading animation */
+    .loading {
+      position: relative;
+      pointer-events: none;
+      opacity: 0.7;
+    }
+    .loading::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 18px;
+      height: 18px;
+      margin: -9px 0 0 -9px;
+      border: 3px solid transparent;
+      border-top-color: white;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+
+  <div id="toaster" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+  <script>
+  // Toaster helper functions
+  function showToaster(message, type = 'success', duration = 3000) {
+    const toaster = document.getElementById('toaster');
+    toaster.textContent = message;
+    toaster.className = '';
+    toaster.classList.add(type, 'show');
+    setTimeout(() => {
+      toaster.classList.remove('show');
+    }, duration);
+  }
+
+  // Handle contact form submission asynchronously with button animation and toaster messages
+  const contactForm = document.querySelector('#contact form');
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+
+  contactForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const formData = {
+      name: contactForm.name.value.trim(),
+      email: contactForm.email.value.trim(),
+      message: contactForm.message.value.trim()
+    };
+
+    // Basic client-side validation
+    if (!formData.name || !formData.email || !formData.message) {
+      showToaster('Please fill in all fields.', 'error');
+      return;
+    }
+
+    try {
+      // Disable button and show loading animation
+      submitButton.disabled = true;
+      submitButton.classList.add('loading');
+
+      const response = await fetch('http://localhost:10000/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        showToaster(result.message, 'success');
+        contactForm.reset();
+      } else {
+        showToaster(result.error || 'An error occurred. Please try again.', 'error');
+      }
+    } catch (error) {
+      showToaster('Failed to send message. Please try again later.', 'error');
+      console.error('Error submitting contact form:', error);
+    } finally {
+      // Re-enable button and remove loading animation
+      submitButton.disabled = false;
+      submitButton.classList.remove('loading');
+    }
+  });
+  </script>
+
+<!-- Footer Section -->
+<footer class="bg-[#a51a1a] text-white py-12 mt-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-10">
+      <!-- Branding -->
+      <div class="md:w-1/4">
+        <a href="#home" class="flex flex-col items-start hover:text-[#d84315] transition-colors duration-300 ease-in-out" aria-label="SocialHub Pro Home" style="width: max-content; min-width: 180px;">
+          <img src="img/logo.jpeg" alt="Content.in Logo" class="h-10 w-auto" />
+        </a>
+        <p class="mt-4 text-yellow-200 text-sm max-w-xs">
+          Elevate your brand with expert social media management, content creation, and digital marketing solutions.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="md:w-1/4">
+        <h3 class="text-yellow-400 font-semibold text-lg mb-4">Quick Links</h3>
+        <ul class="space-y-2 text-yellow-200 text-sm">
+          <li><a href="#home" class="hover:text-yellow-300 transition-colors duration-300">Home</a></li>
+          <li><a href="#about" class="hover:text-yellow-300 transition-colors duration-300">About</a></li>
+          <li><a href="#services" class="hover:text-yellow-300 transition-colors duration-300">Services</a></li>
+          <li><a href="#portfolio" class="hover:text-yellow-300 transition-colors duration-300">Portfolio</a></li>
+          <li><a href="#testimonials" class="hover:text-yellow-300 transition-colors duration-300">Testimonials</a></li>
+          <li><a href="#blog" class="hover:text-yellow-300 transition-colors duration-300">Blog</a></li>
+          <li><a href="#contact" class="hover:text-yellow-300 transition-colors duration-300">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="md:w-1/4">
+        <h3 class="text-yellow-400 font-semibold text-lg mb-4">Contact Us</h3>
+        <ul class="space-y-2 text-yellow-200 text-sm">
+          <li>Email: <a href="mailto:contact@gamil.in" class="hover:text-yellow-300 transition-colors duration-300">contact@gmail.in</a></li>
+          <li>Phone: <a href="tel:+919380955577" class="hover:text-yellow-300 transition-colors duration-300">+91 9380955577</a></li>
+          <li>Location: Chennai, Tamil Nadu, India</li>
+        </ul>
+        <div class="flex space-x-4 mt-4">
+          <a href="#" class="text-yellow-300 hover:text-yellow-400 transition-colors duration-300" aria-label="Instagram"><i class="bi bi-instagram text-xl"></i></a>
+          <a href="#" class="text-yellow-300 hover:text-yellow-400 transition-colors duration-300" aria-label="YouTube"><i class="bi bi-youtube text-xl"></i></a>
+          <a href="#" class="text-yellow-300 hover:text-yellow-400 transition-colors duration-300" aria-label="WhatsApp"><i class="bi bi-whatsapp text-xl"></i></a>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="md:w-1/4">
+        <h3 class="text-yellow-400 font-semibold text-lg mb-4">Subscribe to Our Newsletter</h3>
+        <form class="flex flex-col sm:flex-row gap-4" action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+          <input type="email" name="email" placeholder="Enter your email" required class="w-full px-4 py-2 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400" aria-label="Email address for newsletter subscription" />
+          <button type="submit" class="bg-yellow-400 text-[#7a1212] font-semibold rounded-lg px-6 py-2 hover:bg-yellow-500 transition-colors duration-300">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="mt-10 border-t border-yellow-300 pt-6 text-center text-yellow-200 text-sm">
+      &copy; <span id="currentYear"></span> Content.in. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+<script src="testimonials.js" defer></script>
+<script src="main.js" defer></script>
+<script src="videoPortfolio.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+<!-- SwiperJS & Animation -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Right Bottom Floating Social Icons -->
+  <div id="socialIconWrapper" class="fixed right-4 bottom-4 flex flex-col items-center z-50">
+    <button id="toggleSocialIcons" aria-label="Toggle social icons" class="mb-2 w-10 h-10 bg-[#a51a1a] text-white rounded-full flex items-center justify-center shadow-lg hover:bg-[#d84315] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#d84315]">
+      <i id="toggleIcon" class="bi bi-chevron-double-up text-xl"></i>
+    </button>
+    <div id="socialIconBar" class="flex flex-col space-y-4 bg-white rounded-lg shadow-lg p-3 w-12 overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+      <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-pink-600 hover:text-pink-800 text-3xl relative group">
+        <i class="bi bi-instagram"></i>
+        <span class="absolute left-full top-1/2 transform -translate-y-1/2 ml-2 whitespace-nowrap bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">Instagram</span>
+      </a>
+      <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-blue-700 hover:text-blue-900 text-3xl relative group">
+        <i class="bi bi-linkedin"></i>
+        <span class="absolute left-full top-1/2 transform -translate-y-1/2 ml-2 whitespace-nowrap bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">LinkedIn</span>
+      </a>
+      <a href="https://wa.me/919380955577"
