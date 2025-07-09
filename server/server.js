@@ -1,5 +1,5 @@
 // Added nodemailer for sending emails
-require('dotenv').config()
+//require('dotenv').config()
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -18,8 +18,8 @@ const transporter = nodemailer.createTransport({
   port: 587, // SMTP port for TLS
   secure: false, // use TLS
   auth: {
-    user: process.env.EMAIL_USER, // Use environment variable
-    pass: process.env.EMAIL_PASS  // Use environment variable
+    user: 'contentmovin@gmail.com', // SMTP username
+    pass: 'ptpo ykqr yssv jiin' // SMTP password
   }
 });
 
